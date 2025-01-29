@@ -1,0 +1,136 @@
+/* Course Filters */
+.course-filters {
+    padding: 2rem 5%;
+    background: #f8fafc;
+    position: sticky;
+    top: 70px;
+    z-index: 999;
+}
+
+.filter-tags {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-tag {
+    background: #fff;
+    border: 2px solid #1a365d;
+    color: #1a365d;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-tag.active {
+    background: #1a365d;
+    color: white;
+}
+
+.filter-tag:hover {
+    background: #1a365d;
+    color: white;
+}
+
+/* Course Card Adjustments */
+.course-card {
+    position: relative;
+    min-height: 350px;
+}
+
+.apply-btn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+}
+
+/* Enhanced Footer */
+footer {
+    background: #0f273d;
+    color: white;
+    padding: 4rem 5% 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 1.5rem;
+    color: #f59e0b;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-section a:hover {
+    color: #f59e0b;
+}
+
+.newsletter-form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.social-links {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.legal-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.legal-links a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .course-filters {
+        top: 60px;
+    }
+    
+    .filter-tags {
+        gap: 0.5rem;
+    }
+    
+    .filter-tag {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+

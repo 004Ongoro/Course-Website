@@ -6,6 +6,7 @@
     <title>SJ Tutor - Quality Education</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* All previous CSS styles remain unchanged */
         * {
             margin: 0;
             padding: 0;
@@ -13,7 +14,6 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* Navigation */
         nav {
             background: #1a365d;
             padding: 1rem 5%;
@@ -66,7 +66,6 @@
             display: none;
         }
 
-        /* Hero Section */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
@@ -107,7 +106,10 @@
             animation: fadeInUp 1s ease 0.6s backwards;
         }
 
-        /* Featured Courses */
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
         .featured-courses {
             padding: 5rem 5%;
             background: #f8fafc;
@@ -162,7 +164,6 @@
             gap: 1rem;
         }
 
-        /* Why Choose Us */
         .features {
             padding: 5rem 5%;
             background: #1a365d;
@@ -193,7 +194,75 @@
             margin-bottom: 1rem;
         }
 
-        /* Footer */
+        .testimonials {
+            padding: 5rem 5%;
+            background: #f8fafc;
+        }
+
+        .testimonials-carousel {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .testimonials-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .testimonial-card {
+            min-width: 100%;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .testimonial-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+            color: #333;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #1a365d;
+        }
+
+        .testimonial-role {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .carousel-dot.active {
+            background: #1a365d;
+            transform: scale(1.2);
+        }
+
         footer {
             background: #0f273d;
             color: white;
@@ -303,18 +372,18 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <a href="#" class="logo"><i class="fas fa-graduation-cap"></i>SJ Tutor</a>
+        <a href="index.html" class="logo"><i class="fas fa-graduation-cap"></i>SJ Tutor</a>
         <div class="nav-links">
-            <a href="#home" class="active"><i class="fas fa-home"></i>Home</a>
+            <a href="index.html" class="active"><i class="fas fa-home"></i>Home</a>
             <a href="courses.html"><i class="fas fa-book"></i>Courses</a>
-            <a href="#about"><i class="fas fa-info-circle"></i>About</a>
-            <a href="#contact"><i class="fas fa-envelope"></i>Contact</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i>About</a>
+            <a href="contact.html"><i class="fas fa-envelope"></i>Contact</a>
         </div>
         <i class="menu-toggle fas fa-bars"></i>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero">
         <div class="hero-content">
             <h1>Transform Your Learning Experience</h1>
             <p>Personalized education with expert tutors in 50+ subjects</p>
@@ -355,7 +424,7 @@
     </section>
 
     <!-- Why Choose Us -->
-    <section class="features" id="about">
+    <section class="features">
         <h2 class="section-title">Why Choose SJ Tutor?</h2>
         <div class="feature-grid">
             <div class="feature-card">
@@ -378,16 +447,52 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2 class="section-title">What Our Students Say</h2>
+        <div class="testimonials-carousel">
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Student" class="testimonial-avatar">
+                    <p class="testimonial-text">
+                        "SJ Tutor transformed my learning experience. The personalized attention helped me improve my grades significantly!"
+                    </p>
+                    <div class="testimonial-author">Sarah Johnson</div>
+                    <div class="testimonial-role">High School Student</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Parent" class="testimonial-avatar">
+                    <p class="testimonial-text">
+                        "As a parent, I appreciate the quality of education and regular progress updates. Highly recommended!"
+                    </p>
+                    <div class="testimonial-author">Michael Chen</div>
+                    <div class="testimonial-role">Parent</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Tutor" class="testimonial-avatar">
+                    <p class="testimonial-text">
+                        "Teaching with SJ Tutor has been a rewarding experience. The platform makes it easy to connect with students."
+                    </p>
+                    <div class="testimonial-author">Emma Wilson</div>
+                    <div class="testimonial-role">Mathematics Tutor</div>
+                </div>
+            </div>
+            <div class="carousel-dots"></div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i>Admissions</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i>Testimonials</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i>Blog</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i>Careers</a></li>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i>Home</a></li>
+                    <li><a href="courses.html"><i class="fas fa-chevron-right"></i>Courses</a></li>
+                    <li><a href="about.html"><i class="fas fa-chevron-right"></i>About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i>Contact</a></li>
                 </ul>
             </div>
 
@@ -396,7 +501,7 @@
                 <ul>
                     <li><a href="#"><i class="fas fa-download"></i>Study Materials</a></li>
                     <li><a href="#"><i class="fas fa-video"></i>Video Library</a></li>
-                    <li><a href="#"><i class="fas fa-book-open"></i>Research Papers</a></li>
+                    <li><a href="#"><i class="fas fa-book-open"></i>E-Books</a></li>
                 </ul>
             </div>
 
@@ -438,23 +543,41 @@
             });
         });
 
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+        // Testimonials Carousel
+        const carouselContainer = document.querySelector('.testimonials-container');
+        const dotsContainer = document.querySelector('.carousel-dots');
+        const testimonialCards = document.querySelectorAll('.testimonial-card');
+        let currentIndex = 0;
+        let autoPlay = true;
+
+        // Initialize dots
+        testimonialCards.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('carousel-dot');
+            if(index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToTestimonial(index));
+            dotsContainer.appendChild(dot);
         });
 
-        // Newsletter Form
-        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = this.querySelector('input').value;
-            alert(`Thank you for subscribing! We've sent a confirmation to ${email}`);
-            this.reset();
-        });
+        function goToTestimonial(index) {
+            currentIndex = index;
+            carouselContainer.style.transform = `translateX(-${index * 100}%)`;
+            document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        // Auto-rotate testimonials
+        setInterval(() => {
+            if(autoPlay) {
+                currentIndex = (currentIndex + 1) % testimonialCards.length;
+                goToTestimonial(currentIndex);
+            }
+        }, 7000);
+
+        // Pause on hover
+        carouselContainer.addEventListener('mouseenter', () => autoPlay = false);
+        carouselContainer.addEventListener('mouseleave', () => autoPlay = true);
 
         // Navbar Scroll Effect
         window.addEventListener('scroll', function() {
@@ -466,6 +589,14 @@
                 nav.style.background = '#1a365d';
                 nav.style.padding = '1rem 5%';
             }
+        });
+
+        // Newsletter Form
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input').value;
+            alert(`Thank you for subscribing! We've sent a confirmation to ${email}`);
+            this.reset();
         });
     </script>
 </body>
